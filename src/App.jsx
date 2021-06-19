@@ -1,46 +1,36 @@
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Navbar from './components/navbar';
+import TodoApp from './components/todoApp';
+import Login from './pages/Login';
+import Register from './pages/Register';
 import './App.css';
-import React, {useState} from 'react'
-import Form from './components/form';
-import Header from './components/Header.jsx';
-import TodosList from './components/TodosList';
+
 
 const App = () =>  {
 
-  const [input, setInput] = useState('');
-  const [todos, setTodos] = useState([]);
-  const [editTodo, setEditTodo] = useState(null);
-
+  
   return (
-    <div className="container">
-      <div className="app-wrapper">
-        <div>
-          <Header />
-        </div>
-
-        <div>
-          <Form 
-            input={input}
-            setInput={setInput}
-            todos={todos}
-            setTodos= {setTodos}
-            editTodo= {editTodo}
-            setEditTodo ={setEditTodo}
-          />
-        </div>
-
-        <div>
-          <TodosList 
-            todos={todos}
-            setTodos= {setTodos}
-            setEditTodo ={setEditTodo}
-          />
-        </div>
-               
-      </div>
+		<BrowserRouter>
+		
+				<Navbar />
       
-      
-    </div>
-  );
+				<Switch>
+					<Route path='/login'>
+						<Login />
+					</Route>
+					<Route path='/register'>
+						<Register />
+					</Route>
+					<Route path='/todo-app'>
+						<TodoApp />
+					</Route>
+					<Route>
+						<Login />
+					</Route>
+				</Switch>
+			
+		</BrowserRouter>
+	);
 }
 
 export default App;

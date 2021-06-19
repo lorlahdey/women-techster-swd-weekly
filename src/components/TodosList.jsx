@@ -10,7 +10,7 @@ const TodosList = ({todos, setTodos, setEditTodo}) => {
                 }
                 return item;
             })
-        )
+        );
     };
 // deleting a Todo list item 
     const handleDelete =({id}) => {

@@ -13,6 +13,7 @@
 }
 
 .app-wrapper {
+  margin-top: 25px;
   background-color: #12343b;
   min-width: 450px;
   min-height: 650px;
@@ -104,4 +105,54 @@ input:focus, button:focus {
 }
 
 
+.navbar {
+  background-color:#12343b;
+  padding: 20px;
+}
+.navbar .link{
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  margin-right: 20px;
+}
 
+
+
+.form-container {
+  min-width: 450px;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+  color: #12343b;
+}
+.form-container h2{
+  margin-bottom: 15px;
+  font-size: 45px;
+  font-weight: bold;
+}
+ label{
+   display: inline-block;
+  margin-bottom: 10px;
+  font-size: 18px;
+  
+}
+
+.form-container input{
+  /* margin-top: 15px; */
+	padding: 0.75rem 0.5rem;
+	font-family: inherit;
+	font-size: inherit;
+	border: none;
+	border-radius: 10px;
+  outline: none;
+	width: 100%;
+}
+
+.form-container button[type='submit'] {
+	margin: 10px auto;
+  padding: 18px;
+  border-radius: 10px;
+  border: none;
+  color: #12343b;
+  font-size: 18px;
+}

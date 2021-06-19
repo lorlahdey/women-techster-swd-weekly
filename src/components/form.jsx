@@ -1,5 +1,5 @@
 import React, { useEffect} from 'react';
-import {v4 as uuidv4}  from "uuid";
+import { v4 as uuidv4 }  from "uuid";
 
 const Form = ({input, setInput, todos, setTodos, editTodo, setEditTodo}) => {
     
@@ -17,7 +17,7 @@ const Form = ({input, setInput, todos, setTodos, editTodo, setEditTodo}) => {
         } else {
             setInput("");
         }
-    }, [setInput,editTodo]);
+    }, [setInput, editTodo]);
 
     const onInputChange = (e) => {
         setInput(e.target.value);
@@ -26,7 +26,7 @@ const Form = ({input, setInput, todos, setTodos, editTodo, setEditTodo}) => {
         e.preventDefault();
         if(!editTodo) {
             setTodos([...todos, {id: uuidv4(), title: input, completed: false}]);
-            setInput('');
+            setInput("");
         } else {
             updateTodo(input, editTodo.id, editTodo.completed)
         }
