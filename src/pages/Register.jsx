@@ -36,7 +36,7 @@ function Register() {
 					return alert(result.message);
 				}
 
-				history.push('/todo-app');
+				history.push('/my-note');
 			})
 			.catch(err => {
 				console.log('this error occurred', err);
@@ -50,7 +50,7 @@ function Register() {
             <form className='form-container' onSubmit={handleSubmit(handleRegister)}>
                 <div>
                     <h2>Register</h2>
-                    <span>Hello, register to start adding your todo items</span>
+                    <span>Hello, register to start keeping a record of your notes</span>
                 </div>
                 <br />
                 <div>

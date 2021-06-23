@@ -4,11 +4,11 @@ import { useForm } from 'react-hook-form';
 
 function Login() {
 
-
+    
 	const { register, handleSubmit } = useForm();
 	const history = useHistory();
 
-	const loginHandler = ({ email, password }) => {
+	const loginHandler = ({ email, password, setlogin}) => {
         
 		// create data to be sent to the api for validation
 		let userdata = {
@@ -32,8 +32,7 @@ function Login() {
 					return alert(result.message);
 				}
 
-
-				history.push('/todo-app');
+				history.push('/my-note');
 			})
 			.catch(err => {
 				alert(
@@ -49,7 +48,7 @@ function Login() {
             <form className='form-container' onSubmit={handleSubmit(loginHandler)}>
                 <div>
                     <h2>Login</h2>
-                    <span>Welcome back, Login to view your todo lists</span>
+                    <span>Welcome back, Login to view your saved notes</span>
                 </div>
                 <br />
                 <div>

@@ -1,12 +1,12 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Navbar from './components/navbar';
-import TodoApp from './components/todoApp';
 import Login from './pages/Login';
 import Register from './pages/Register';
-import './App.css';
+import MyNoteApp from './components/myNoteApp';
 
 
 const App = () =>  {
+
 
   
   return (
@@ -21,8 +21,8 @@ const App = () =>  {
 					<Route path='/register'>
 						<Register />
 					</Route>
-					<Route path='/todo-app'>
-						<TodoApp />
+					<Route path='/my-note'>
+						<MyNoteApp />
 					</Route>
 					<Route>
 						<Login />
