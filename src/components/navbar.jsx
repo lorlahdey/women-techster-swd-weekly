@@ -1,24 +1,24 @@
-import { Link } from 'react-router-dom';
-import { useState } from 'react'
+import { Link , useHistory } from 'react-router-dom';
 
-function Navbar() {
-    const [login, setlogin] = useState("")
+function Navbar({state, setState}) {
+   
+    const history = useHistory();
+
+    const logout = () => {
+        setState(false);
+        history.push('/login');
+	};
 
 	return (
-		// <nav className='navbar'> 
-        //     <Link className='link' to='/login'>Login </Link>
-        //     <Link className='link' to='/register'>Register</Link>
-        //     <Link className='link' to='/my-note'>My Note</Link>
-			
-		// </nav>
-
-        //working with specific menu for each page on the nav bar
+        // working with specific menu for each page on the nav bar
         <nav className='navbar'> 
-			{login ? (
+			{state ? (
 				<>
 					<Link className='link' to='/my-note'>My List</Link>
 					<br />
-					<span>Logout</span>
+					<span onClick={logout} className='link'>
+						Logout
+					</span>
 				</>
 			) : (
 				<>
