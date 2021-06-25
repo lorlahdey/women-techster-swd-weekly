@@ -1,14 +1,15 @@
 import { useHistory } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
+import { useContext } from 'react';
+import { AppContext } from '../components/stateprovider';
 
 
 function Login() {
-
-    
+    const { setState } = useContext(AppContext);
 	const { register, handleSubmit } = useForm();
 	const history = useHistory();
 
-	const loginHandler = ({ email, password, setlogin}) => {
+	const loginHandler = ({ email, password}) => {
         
 		// create data to be sent to the api for validation
 		let userdata = {
@@ -31,6 +32,13 @@ function Login() {
 				if (result.error) {
 					return alert(result.message);
 				}
+                alert('login successfull');
+                setState(prevstate => {
+                    return {
+                        ...prevstate,
+                        isLoggedIn: true,
+                    };
+                });
 
 				history.push('/my-note');
 			})

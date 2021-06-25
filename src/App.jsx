@@ -3,15 +3,13 @@ import Navbar from './components/navbar';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import MyNoteApp from './components/myNoteApp';
-
+import StateProvider from './components/stateprovider';
 
 const App = () =>  {
-
-
   
   return (
 		<BrowserRouter>
-		
+			<StateProvider>
 				<Navbar />
       
 				<Switch>
@@ -28,7 +26,7 @@ const App = () =>  {
 						<Login />
 					</Route>
 				</Switch>
-			
+			</StateProvider>
 		</BrowserRouter>
 	);
 }

@@ -1,24 +1,34 @@
-import { Link } from 'react-router-dom';
-import { useState } from 'react'
+import { useContext } from 'react';
+import { AppContext } from './stateprovider';
+import { Link, useHistory } from 'react-router-dom';
 
 function Navbar() {
-    const [login, setlogin] = useState("")
+    const { state, setState } = useContext(AppContext);
+	const history = useHistory();
+
+
+    const logout = () => {
+		setState(prev => {
+			return {
+				...prev,
+				isLoggedIn: false,
+			};
+		});
+		history.push('/login');
+	};
+
 
 	return (
-		// <nav className='navbar'> 
-        //     <Link className='link' to='/login'>Login </Link>
-        //     <Link className='link' to='/register'>Register</Link>
-        //     <Link className='link' to='/my-note'>My Note</Link>
-			
-		// </nav>
 
         //working with specific menu for each page on the nav bar
         <nav className='navbar'> 
-			{login ? (
+			{state.isLoggedIn ? (
 				<>
 					<Link className='link' to='/my-note'>My List</Link>
 					<br />
-					<span>Logout</span>
+					<span onClick={logout} className='link'>
+						Logout
+					</span>
 				</>
 			) : (
 				<>

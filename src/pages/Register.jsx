@@ -1,9 +1,12 @@
-import { useForm } from 'react-hook-form';
 import { useHistory } from 'react-router-dom';
+import { useForm } from 'react-hook-form';
+// import { useContext } from 'react';
+// import { AppContext } from '../components/stateprovider';
 
 
 
 function Register() {
+    // const { setState } = useContext(AppContext);
 	const { register, handleSubmit } = useForm();
 	const history = useHistory();
 
@@ -35,8 +38,9 @@ function Register() {
 				if (result.error === true) {
 					return alert(result.message);
 				}
+                alert('Your account has been created, you can now login');
 
-				history.push('/my-note');
+				history.push('/login');
 			})
 			.catch(err => {
 				console.log('this error occurred', err);
