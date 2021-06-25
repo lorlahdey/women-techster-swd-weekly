@@ -32,6 +32,7 @@ function Login({setState}) {
 				if (result.error) {
 					return alert(result.message);
 				}
+                alert('login successfull');
                 setState(true)
 				history.push('/my-note');
 			})

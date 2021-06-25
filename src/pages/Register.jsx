@@ -37,7 +37,8 @@ function Register() {
 				}
                 // setState(true)
 				// history.push('/my-note');
-
+                
+                alert('Your account has been created, you can now login');
 				history.push('/login');
 			})
 			.catch(err => {
