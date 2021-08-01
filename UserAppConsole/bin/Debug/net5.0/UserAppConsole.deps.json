@@ -1,0 +1,47 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "UserAppConsole/1.0.0": {
+        "dependencies": {
+          "QueueManagement": "1.0.0",
+          "UserFileManager": "1.0.0"
+        },
+        "runtime": {
+          "UserAppConsole.dll": {}
+        }
+      },
+      "QueueManagement/1.0.0": {
+        "runtime": {
+          "QueueManagement.dll": {}
+        }
+      },
+      "UserFileManager/1.0.0": {
+        "runtime": {
+          "UserFileManager.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "UserAppConsole/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "QueueManagement/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UserFileManager/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -9,11 +9,11 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/CalculatorConsoleTask/bin/Debug/net5.0/CalculatorConsoleTask.dll",
+            "program": "${workspaceFolder}/UserAppConsole/bin/Debug/net5.0/UserAppConsole.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/CalculatorConsoleTask",
-            "console": "internalConsole",
-            "stopAtEntry": false
+            "cwd": "${workspaceFolder}/UserAppConsole",
+            "stopAtEntry": false,
+            "console": "internalConsole"
         },
         {
             "name": ".NET Core Attach",

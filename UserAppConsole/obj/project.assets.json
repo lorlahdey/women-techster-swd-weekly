@@ -1,0 +1,107 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0": {
+      "QueueManagement/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/QueueManagement.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/QueueManagement.dll": {}
+        }
+      },
+      "UserFileManager/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/UserFileManager.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UserFileManager.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "QueueManagement/1.0.0": {
+      "type": "project",
+      "path": "../QueueManagement/QueueManagement.csproj",
+      "msbuildProject": "../QueueManagement/QueueManagement.csproj"
+    },
+    "UserFileManager/1.0.0": {
+      "type": "project",
+      "path": "../UserFileManager/UserFileManager.csproj",
+      "msbuildProject": "../UserFileManager/UserFileManager.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0": [
+      "QueueManagement >= 1.0.0",
+      "UserFileManager >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/Users/lolade/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/lolade/Desktop/WTF/women-techster-swd-weekly/UserAppConsole/UserAppConsole.csproj",
+      "projectName": "UserAppConsole",
+      "projectPath": "/Users/lolade/Desktop/WTF/women-techster-swd-weekly/UserAppConsole/UserAppConsole.csproj",
+      "packagesPath": "/Users/lolade/.nuget/packages/",
+      "outputPath": "/Users/lolade/Desktop/WTF/women-techster-swd-weekly/UserAppConsole/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/lolade/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "projectReferences": {
+            "/Users/lolade/Desktop/WTF/women-techster-swd-weekly/QueueManagement/QueueManagement.csproj": {
+              "projectPath": "/Users/lolade/Desktop/WTF/women-techster-swd-weekly/QueueManagement/QueueManagement.csproj"
+            },
+            "/Users/lolade/Desktop/WTF/women-techster-swd-weekly/UserFileManager/UserFileManager.csproj": {
+              "projectPath": "/Users/lolade/Desktop/WTF/women-techster-swd-weekly/UserFileManager/UserFileManager.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0": {
+        "targetAlias": "net5.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.301/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
