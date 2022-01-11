@@ -14,7 +14,7 @@ function Navbar({state, setState}) {
         <nav className='navbar'> 
 			{state ? (
 				<>
-					<Link className='link' to='/my-note'>My List</Link>
+					<Link className='link' to='/my-note'>My Journal</Link>
 					<br />
 					<span onClick={logout} className='link'>
 						Logout
