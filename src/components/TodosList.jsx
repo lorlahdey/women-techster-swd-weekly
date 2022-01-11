@@ -12,12 +12,12 @@ const TodosList = ({todos, setTodos, setEditTodo}) => {
             })
         )
     };
-// deleting a Todo list item 
+    // deleting a Todo list item 
     const handleDelete =({id}) => {
         setTodos(todos.filter((todo) => todo.id !== id));
     };
 
-// editing the Todo list item when the edit button is clicked
+    // editing the Todo list item when the edit button is clicked
     const handleEdit =({id}) => {
         const findTodo = todos.find((todo) => todo.id === id);
         setEditTodo(findTodo);
@@ -44,8 +44,7 @@ const TodosList = ({todos, setTodos, setEditTodo}) => {
                         <i className="fa fa-edit"></i>
                     </button>
                 </li>
-            )
-            )}
+            ))}
         </div>
     )
 }

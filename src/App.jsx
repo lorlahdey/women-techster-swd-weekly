@@ -1,46 +1,49 @@
 import './App.css';
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import Form from './components/form';
 import Header from './components/Header.jsx';
 import TodosList from './components/TodosList';
 
 const App = () =>  {
 
-  const [input, setInput] = useState('');
-  const [todos, setTodos] = useState([]);
-  const [editTodo, setEditTodo] = useState(null);
+    const todoObjects = JSON.parse(localStorage.getItem('todos')) || []
+    const [input, setInput] = useState('');
+    const [todos, setTodos] = useState(todoObjects);
+    const [editTodo, setEditTodo] = useState(null);
 
-  return (
-    <div className="container">
-      <div className="app-wrapper">
-        <div>
-          <Header />
-        </div>
+    useEffect(() => {
+        localStorage.setItem('todos', JSON.stringify(todos))
+    }, [todos])
 
-        <div>
-          <Form 
-            input={input}
-            setInput={setInput}
-            todos={todos}
-            setTodos= {setTodos}
-            editTodo= {editTodo}
-            setEditTodo ={setEditTodo}
-          />
-        </div>
+    return (
+        <div className="container">
+            <div className="app-wrapper">
+                <div>
+                    <Header />
+                </div>
 
-        <div>
-          <TodosList 
-            todos={todos}
-            setTodos= {setTodos}
-            setEditTodo ={setEditTodo}
-          />
+                <div>
+                    <Form 
+                        input={input}
+                        setInput={setInput}
+                        todos={todos}
+                        setTodos= {setTodos}
+                        editTodo= {editTodo}
+                        setEditTodo ={setEditTodo}
+                    />
+                </div>
+
+                <div>
+                    <TodosList 
+                        todos={todos}
+                        setTodos= {setTodos}
+                        setEditTodo ={setEditTodo}
+                    />
+                </div>
+                    
+            </div>
         </div>
-               
-      </div>
-      
-      
-    </div>
-  );
+    );
 }
 
 export default App;
