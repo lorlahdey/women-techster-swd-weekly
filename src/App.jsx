@@ -12,9 +12,7 @@ const App = () =>  {
   
   return (
 		<BrowserRouter>
-		
 				<Navbar state={state} setState={setstate}/>
-      
 				<Switch>
 					<Route path='/login'>
 						<Login setState={setstate} />
@@ -32,7 +30,6 @@ const App = () =>  {
 						<Login />
 					</Route>
 				</Switch>
-			
 		</BrowserRouter>
 	);
 }
