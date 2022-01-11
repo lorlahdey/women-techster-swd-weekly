@@ -5,13 +5,10 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import './App.css';
 
-
 const App = () =>  {
 
-  
-  return (
+    return (
 		<BrowserRouter>
-		
 				<Navbar />
       
 				<Switch>

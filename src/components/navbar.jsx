@@ -7,7 +7,6 @@ function Navbar() {
             <Link className='link' to='/login'>Login </Link>
             <Link className='link' to='/register'>Register</Link>
             <Link className='link' to='/todo-app'>Todo App</Link>
-			
 		</nav>
 	);
 }
