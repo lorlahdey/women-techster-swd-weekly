@@ -2,7 +2,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Navbar from './components/navbar';
 import Login from './pages/Login';
 import Register from './pages/Register';
-import MyNoteApp from './components/myNoteApp';
+import MyNoteApp from './pages/MyNoteApp';
 import StateProvider from './components/stateprovider';
 
 const App = () =>  {
@@ -18,6 +18,9 @@ const App = () =>  {
 					</Route>
 					<Route path='/register'>
 						<Register />
+					</Route>
+					<Route path='/my-note'>
+						<MyNoteApp />
 					</Route>
 					<Route path='/my-note'>
 						<MyNoteApp />

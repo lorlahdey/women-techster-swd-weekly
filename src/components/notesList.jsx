@@ -1,7 +1,6 @@
 import AddNote from "./addNote"
 import Notes from "./note"
 
-
 const NotesList = ({ notes, handleAddNote, handleDeleteNote }) => {
     return (
         //using the map function to loop over our array of list   
@@ -18,7 +17,6 @@ const NotesList = ({ notes, handleAddNote, handleDeleteNote }) => {
             )} 
             <AddNote 
                 handleAddNote={handleAddNote}
-        
              />
         </div>
     )

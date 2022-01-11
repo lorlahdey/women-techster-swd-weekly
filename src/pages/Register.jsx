@@ -39,7 +39,6 @@ function Register() {
 					return alert(result.message);
 				}
                 alert('Your account has been created, you can now login');
-
 				history.push('/login');
 			})
 			.catch(err => {

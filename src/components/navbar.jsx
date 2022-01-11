@@ -6,7 +6,6 @@ function Navbar() {
     const { state, setState } = useContext(AppContext);
 	const history = useHistory();
 
-
     const logout = () => {
 		setState(prev => {
 			return {
@@ -17,27 +16,27 @@ function Navbar() {
 		history.push('/login');
 	};
 
-
 	return (
-
-        //working with specific menu for each page on the nav bar
+        // working with specific menu for each page on the nav bar
         <nav className='navbar'> 
-			{state.isLoggedIn ? (
+			{
+				state.isLoggedIn 
+			?
 				<>
-					<Link className='link' to='/my-note'>My List</Link>
+					<Link className='link' to='/my-note'>My Journal</Link>
 					<br />
 					<span onClick={logout} className='link'>
 						Logout
 					</span>
 				</>
-			) : (
+			: 
 				<>
 					<Link className='link' to='/login'>Login</Link>
 					<br />
 					<Link className='link' to='/register'>Register</Link>
 					<br />
 				</>
-			)}
+			}
 		</nav>
 	);
 }
